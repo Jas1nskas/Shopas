@@ -1,4 +1,17 @@
-const items = [
+
+
+interface itemsInt {
+        name:string,
+        photo:string,
+        weight:number,
+        price:number,
+        category:string
+}
+
+
+
+
+const items: itemsInt[] = [
     {
         name: "Milk",
         photo: "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/Glass-and-bottle-of-milk-fe0997a.jpg?quality=90&resize=960,872",
@@ -63,3 +76,44 @@ const items = [
         category: "furniture"
     },
 ]
+
+const itemscard = document.querySelector(".itemsCard")!
+const inventorItems = document.querySelector(".inventory")!
+const weightCount = document.querySelector(".weight")!
+const money = document.querySelector(".money")!
+const shop = document.querySelector(".shop")!
+
+let moneyCount = 200
+let weightTotal = 30
+
+money.innerHTML = `money: ${moneyCount}`
+weightCount.innerHTML = `Weight: ${weightTotal}`
+
+function createShopItems(obj: itemsInt[]): void {
+    for (const shopItem of obj) {
+        const item = document.createElement("itemDiv")
+        shop.appendChild(item)
+        item.classList.add("itemsCard")
+        const img = document.createElement("img")
+        item.appendChild(img)
+        img.src = shopItem.photo
+        const name = document.createElement("p")
+        item.appendChild(name)
+        name.innerText = shopItem.name
+        const weight = document.createElement("p")
+        item.appendChild(weight)
+        weight.innerText = `${shopItem.weight}`
+        const price = document.createElement("p")
+        item.appendChild(price)
+        price.innerText = `${shopItem.price}`
+        item.onclick = () => {
+            if (moneyCount >= 0 && moneyCount >= shopItem.price && weightTotal >= 0 && weightTotal >= shopItem.weight) {
+                inventorItems.appendChild(item.cloneNode(true))
+                weightTotal -= shopItem.weight
+                weightCount.innerHTML = `Weight left: ${weightTotal}`
+                moneyCount -= shopItem.price
+                money.innerHTML = `Money left: ${moneyCount}`
+            }
+        }
+    }
+}

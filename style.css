@@ -1,6 +1,99 @@
-.cards {
-    height: 250px;
-    width: 300px;
-    background-color: grey;
-    color: black;
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Yeseva One', cursive;
+}
+
+.shop{
+    width: 450px;
+    height: 600px;
+    border: black solid 2px;
+    margin-bottom:15px ;
+    background-color: #ece9e9;
+    margin-right: 15px;
+}
+
+.inventory{
+    width: 450px;
+    height: 600px;
+    border: black solid 2px;
+    background-color: #eee9e9;
+
+}
+
+.itemsCard{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border: black solid 2px;
+}
+
+#addProductBTN{
+    width: 450px;
+    height: 60px;
+    border: black solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.category{
+    height: 50px;
+    border-bottom: black solid 2px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.values{
+    height: 50px;
+    border-bottom: black solid 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input{
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+.modal-header {
+    padding: 2px 16px;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Content */
+#modal-content {
+    width: 450px;
+    height: 600px;
+    position: relative;
+    background-color: #eee9e9;
+    margin: auto;
+    border: black solid 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.shopcontainer{
+
+
 }
