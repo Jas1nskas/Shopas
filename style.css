@@ -6,30 +6,33 @@ body{
 }
 
 .shop{
-    width: 450px;
     height: 600px;
+    width: 450px;
     border: black solid 2px;
     margin-bottom:15px ;
     background-color: #ece9e9;
     margin-right: 15px;
+    overflow-y:scroll
 }
 
 .inventory{
-    width: 450px;
     height: 600px;
+    width: 450px;
     border: black solid 2px;
     background-color: #eee9e9;
+    margin-right: 15px;
 
 }
 
 .itemsCard{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 97%;
     margin: 5px;
     border: black solid 2px;
+    justify-content: space-around;
 }
 
-#addProductBTN{
+#clickCheck{
     width: 450px;
     height: 60px;
     border: black solid 2px;
@@ -58,42 +61,45 @@ body{
     align-items: center;
 }
 
+
+
+.i{
+  font-size: 25px;
+    cursor: pointer;
+}
+
 input{
     height: 50px;
     margin-top: 20px;
 }
-
-
-.modal-header {
-    padding: 2px 16px;
+img{
+    height: 50px;
+    width: 60px;
 }
+
+itemDiv{
+    display: flex;
+}
+
 
 /* Modal Body */
 .modal-body {
     padding: 2px 16px;
     display: flex;
     flex-direction: column;
+
 }
 
 /* Modal Content */
 #modal-content {
     width: 450px;
     height: 600px;
-    position: relative;
     background-color: #eee9e9;
-    margin: auto;
     border: black solid 2px;
     display: flex;
     flex-direction: column;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-.shopcontainer{
-
+    justify-content: center;
 
 }
+
+

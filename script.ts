@@ -117,3 +117,6 @@ function createShopItems(obj: itemsInt[]): void {
         }
     }
 }
+
+createShopItems(items)
+

@@ -101,3 +101,4 @@ function createShopItems(obj) {
         };
     }
 }
+createShopItems(items);
